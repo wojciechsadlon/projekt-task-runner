@@ -4,6 +4,7 @@ $color-main: #fed136;
 $color-light: #ffffff;
 $color-parapgraph: #969696;
 $color-portfolio: #f7f7f7;
+$color-icons: #000000;
 
 $font-title: 'Lora', serif;
 $font-main: 'Work Sans', sans-serif;
@@ -172,6 +173,7 @@ p {
 
 .portfolio {
     padding: 72px 0;
+    margin: 0 auto;
     background: $color-portfolio;
 
     .portfolio-tiles {
@@ -199,6 +201,50 @@ p {
             .portfolio-text {
                 flex: 1;
                 background-color: $color-light;
+            }
+        }
+    }
+}
+
+/* Footer */ 
+
+.footer {
+    display: flex;
+    position: relative;
+    height: 70px;
+
+    p {
+        margin: auto 0;
+        justify-self: flex-start;
+        line-height: 70px;
+    }
+
+    ul {
+        position: absolute;
+        list-style: none;
+        justify-self: center;
+        top: 50%;
+        left: 50%;
+        padding: 0;
+        margin: 0;
+        transform: translate(-50% , -50%);
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+
+                i {
+                    background: $color-icons;
+                    color: $color-light;
+                    border: none;
+                    border-radius: 50%;
+                    line-height: 50px;
+                    width: 50px;
+                    height: 50px;
+                    font-size: 18px;
+                }
             }
         }
     }
