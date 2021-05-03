@@ -2,7 +2,7 @@
 
 $color-main: #fed136;
 $color-light: #ffffff;
-$color-parapgraph: #d6d6d6;
+$color-parapgraph: #969696;
 $color-portfolio: #f7f7f7;
 
 $font-title: 'Lora', serif;
@@ -25,7 +25,17 @@ body {
 
 section {
     max-width: 1140px;
-    margin: 0 auto;
+    margin: 0 0 72px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p {
+    color: $color-parapgraph;
+    font-style: italic;
 }
 
 /* Splash */
@@ -41,6 +51,7 @@ section {
     max-width: 100vw;
 
     .navigation {
+        max-width: 1140px;
         display: flex;
         flex-direction: row;
         margin-top: 1rem;
@@ -54,6 +65,7 @@ section {
             h2 {
                 line-height: 36px;
                 margin: 0;
+                text-transform: none;
             }
         }
 
@@ -91,6 +103,7 @@ section {
 
         h2 {
             font-style: italic;
+            text-transform: none;
             font-family: $font-title;
         }
 
@@ -113,7 +126,42 @@ section {
             &:hover {
                 border: 1px solid $color-light;
                 background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
 
+/* Services */
+
+.services {
+
+    .title p {
+        font-style: italic;
+        margin-bottom: 60px;
+    }
+
+    .services-tiles {
+        display: flex;
+
+        .services-tile {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin: 0 15px;
+
+            i {
+                font-size: 2rem;
+                border-radius: 50%;
+                line-height: 60px;
+                margin: 0 auto;
+                width: 60px;
+                height: 60px;
+                color: $color-main;
+                border: 1px solid $color-main;
+            }
+
+            p {
+                font-style: normal;
             }
         }
     }
