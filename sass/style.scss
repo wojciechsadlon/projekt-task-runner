@@ -1,0 +1,21 @@
+/* Variables */
+
+$color-main: #fed136;
+$color-light: #ffffff;
+$color-parapgraph: #d6d6d6;
+$color-portfolio: #f7f7f7;
+
+$font-title: 'Lora', serif;
+$font-main: 'Work Sans', sans-serif;
+
+
+/* Global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
