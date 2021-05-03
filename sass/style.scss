@@ -25,10 +25,11 @@ body {
 
 section {
     max-width: 1140px;
-    margin: 0 0 72px;
+    margin: 0 auto 72px;
 }
 
 h2 {
+    font-size: 36px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -40,9 +41,9 @@ p {
 
 /* Splash */
 
-.splash{
+.splash {
     background-image: url("https://images.pexels.com/photos/4992644/pexels-photo-4992644.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     height: 70vh;
     background-attachment: fixed;
@@ -51,42 +52,42 @@ p {
     max-width: 100vw;
 
     .navigation {
-        max-width: 1140px;
         display: flex;
-        flex-direction: row;
-        margin-top: 1rem;
+        padding-top: 1rem;
 
         .logo {
-            flex: 3;
+            flex: 2;
             font-family: $font-title;
             font-style: italic;
             color: $color-main;
+            margin-right: auto;
 
             h2 {
-                line-height: 36px;
-                margin: 0;
                 text-transform: none;
             }
         }
 
-        .links {
-            flex: 7;
-            list-style: none;
-            margin: 0;
-            line-height: 36px;
+        nav {
+            flex: 8;
 
-            li {
-                display: inline-block;
-                text-transform: uppercase;
-                margin-right: 1.5rem;
+            .links {
+                list-style: none;
+                margin: 1rem;
+                line-height: 36px;
 
-                a {
-                    text-decoration: none;
-                    color: $color-light;
-                    transition: $transition;
+                li {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    margin-right: 1rem;
 
-                    &:hover {
-                        color: $color-main;
+                    a {
+                        text-decoration: none;
+                        color: $color-light;
+                        transition: $transition;
+
+                        &:hover {
+                            color: $color-main;
+                        }
                     }
                 }
             }
@@ -162,6 +163,42 @@ p {
 
             p {
                 font-style: normal;
+            }
+        }
+    }
+}
+
+/* Portfolio */
+
+.portfolio {
+    padding: 72px 0;
+    background: $color-portfolio;
+
+    .portfolio-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        
+        .portfolio-tile {
+            flex: 30%;
+            max-height: 400px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+
+            .portfolio-image {
+                flex: 3;
+                height: 70%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .portfolio-text {
+                flex: 1;
+                background-color: $color-light;
             }
         }
     }
