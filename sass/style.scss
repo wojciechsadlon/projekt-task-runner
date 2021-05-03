@@ -89,6 +89,8 @@ p {
                         color: $color-light;
                         transition: $transition;
 
+                        i {display: none;}
+
                         &:hover {
                             color: $color-main;
                         }
@@ -245,6 +247,39 @@ p {
                     width: 50px;
                     height: 50px;
                     font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+/* Media query */
+
+@media (max-width: 767px) {
+    .splash {
+        height: 100vh;
+    
+        .navigation {
+
+            .logo h2 {
+                font-size: 20px;
+            }
+
+            nav .links {
+                height: 100%;
+
+                li {
+                    margin: 0;
+                    padding-right: 20px;
+
+                    a {
+                        span {display: none;}
+                        i {
+                            display: inline-block;
+                            color: $color-main;
+                            font-size: 20px;
+                        }
+                    }
                 }
             }
         }
