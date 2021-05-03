@@ -262,6 +262,7 @@ p {
         .navigation {
 
             .logo h2 {
+                padding-left: 15px;
                 font-size: 20px;
             }
 
@@ -284,4 +285,24 @@ p {
             }
         }
     }
+
+    .services .services-tiles {
+        flex-direction: column;
+    }
+
+    .portfolio .portfolio-tiles {
+        flex-direction: column;
+
+            .portfolio-tile {
+                height: 500px;
+
+                .portfolio-image {
+                    height: 200px;
+                }
+
+
+            }
+    }
+
+
 }
