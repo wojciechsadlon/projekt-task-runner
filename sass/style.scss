@@ -65,6 +65,9 @@ p {
 
             h2 {
                 text-transform: none;
+                font-size: 36px;
+                line-height: 46px;
+                margin: 0;
             }
         }
 
@@ -73,8 +76,8 @@ p {
 
             .links {
                 list-style: none;
-                margin: 1rem;
-                line-height: 36px;
+                margin: 0;
+                line-height: 46px;
 
                 li {
                     display: inline-block;
@@ -159,7 +162,7 @@ p {
                 width: 60px;
                 height: 60px;
                 color: $color-main;
-                border: 1px solid $color-main;
+                border: 2px solid $color-main;
             }
 
             p {
@@ -209,20 +212,18 @@ p {
 /* Footer */ 
 
 .footer {
-    display: flex;
     position: relative;
     height: 70px;
 
     p {
-        margin: auto 0;
-        justify-self: flex-start;
+        text-align: left;
         line-height: 70px;
+        margin: 0 0 0 10px;
     }
 
     ul {
         position: absolute;
         list-style: none;
-        justify-self: center;
         top: 50%;
         left: 50%;
         padding: 0;
