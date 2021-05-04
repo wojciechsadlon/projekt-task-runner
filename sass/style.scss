@@ -48,13 +48,14 @@ p {
     background-size: cover;
     height: 70vh;
     background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
     max-width: 100vw;
+    min-height: 730px;
 
     .navigation {
         display: flex;
         padding-top: 1rem;
+        max-width: 1140px;
+        margin: 0 auto;
 
         .logo {
             flex: 2;
@@ -73,6 +74,7 @@ p {
 
         nav {
             flex: 8;
+            text-align: right;
 
             .links {
                 list-style: none;
@@ -103,7 +105,7 @@ p {
     .splash-inner {
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: calc(100% - 60px);
         display: flex;
         flex-direction: column;
         color: $color-light;
@@ -129,6 +131,7 @@ p {
             font-weight: bold;
             border: none;
             transition: $transition;
+            border: 1px solid $color-main;
 
             &:hover {
                 border: 1px solid $color-light;
@@ -157,6 +160,7 @@ p {
             margin: 0 15px;
 
             i {
+                box-sizing: content-box;
                 font-size: 2rem;
                 border-radius: 50%;
                 line-height: 60px;
@@ -165,6 +169,14 @@ p {
                 height: 60px;
                 color: $color-main;
                 border: 2px solid $color-main;
+                transition: $transition;
+
+                &:hover {
+                    background: $color-main;
+                    color: $color-light;
+                    border-radius: 0%;
+                    transform: scale(1.1);
+                }
             }
 
             p {
@@ -180,10 +192,13 @@ p {
     padding: 72px 0;
     margin: 0 auto;
     background: $color-portfolio;
+    max-width: 100%;
 
     .portfolio-tiles {
         display: flex;
         flex-wrap: wrap;
+        max-width: 1140px;
+        margin: 0 auto;
         
         .portfolio-tile {
             flex: 30%;
@@ -195,6 +210,22 @@ p {
             .portfolio-image {
                 flex: 3;
                 height: 70%;
+                position: relative;
+
+                &:hover::after {
+                    background-color: rgba(236, 253, 0,0.5);
+                }
+
+                &::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    content: '';
+                    background-color: rgba(255,255,255,0);
+                    transition: $transition;
+                }
 
                 img {
                     height: 100%;
@@ -216,11 +247,13 @@ p {
 .footer {
     position: relative;
     height: 70px;
+    max-width: 1140px;
+    margin: 20px auto;
 
     p {
         text-align: left;
         line-height: 70px;
-        margin: 0 0 0 10px;
+        margin: 0 0 0 20px;
     }
 
     ul {
@@ -247,6 +280,12 @@ p {
                     width: 50px;
                     height: 50px;
                     font-size: 18px;
+                    transition: $transition;
+
+                    &:hover {
+                        transform: rotate(360deg);
+                        color: $color-main;
+                    }
                 }
             }
         }
