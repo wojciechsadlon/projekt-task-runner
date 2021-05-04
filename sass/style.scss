@@ -5,11 +5,14 @@ $color-light: #ffffff;
 $color-parapgraph: #969696;
 $color-portfolio: #f7f7f7;
 $color-icons: #000000;
+$color-hover: rgba(254, 209, 54, .5);
 
 $font-title: 'Lora', serif;
 $font-main: 'Work Sans', sans-serif;
 
 $transition: 1s all;
+
+$width-max: 1140px;
 
 
 /* Global */
@@ -25,7 +28,7 @@ body {
 }
 
 section {
-    max-width: 1140px;
+    max-width: $width-max;
     margin: 0 auto 72px;
 }
 
@@ -54,8 +57,9 @@ p {
     .navigation {
         display: flex;
         padding-top: 1rem;
-        max-width: 1140px;
+        max-width: $width-max;
         margin: 0 auto;
+        line-height: 46px;
 
         .logo {
             flex: 2;
@@ -67,7 +71,6 @@ p {
             h2 {
                 text-transform: none;
                 font-size: 36px;
-                line-height: 46px;
                 margin: 0;
             }
         }
@@ -79,7 +82,6 @@ p {
             .links {
                 list-style: none;
                 margin: 0;
-                line-height: 46px;
 
                 li {
                     display: inline-block;
@@ -91,7 +93,9 @@ p {
                         color: $color-light;
                         transition: $transition;
 
-                        i {display: none;}
+                        i {
+                            display: none;
+                        }
 
                         &:hover {
                             color: $color-main;
@@ -129,13 +133,12 @@ p {
             background: $color-main;
             font-family: $font-main;
             font-weight: bold;
-            border: none;
             transition: $transition;
-            border: 1px solid $color-main;
+            border: 1px solid transparent;
 
             &:hover {
                 border: 1px solid $color-light;
-                background: rgba(0, 0, 0, 0);
+                background: transparent;
             }
         }
     }
@@ -154,9 +157,6 @@ p {
         display: flex;
 
         .services-tile {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
             margin: 0 15px;
 
             i {
@@ -192,12 +192,12 @@ p {
     padding: 72px 0;
     margin: 0 auto;
     background: $color-portfolio;
-    max-width: 100%;
+    max-width: unset;
 
     .portfolio-tiles {
         display: flex;
         flex-wrap: wrap;
-        max-width: 1140px;
+        max-width: $width-max;
         margin: 0 auto;
         
         .portfolio-tile {
@@ -213,7 +213,7 @@ p {
                 position: relative;
 
                 &:hover::after {
-                    background-color: rgba(236, 253, 0,0.5);
+                    background-color: $color-hover;
                 }
 
                 &::after {
@@ -223,7 +223,7 @@ p {
                     left: 0;
                     top: 0;
                     content: '';
-                    background-color: rgba(255,255,255,0);
+                    background-color: transparent;
                     transition: $transition;
                 }
 
@@ -246,8 +246,7 @@ p {
 
 .footer {
     position: relative;
-    height: 70px;
-    max-width: 1140px;
+    max-width: $width-max;
     margin: 20px auto;
 
     p {
@@ -274,11 +273,9 @@ p {
                 i {
                     background: $color-icons;
                     color: $color-light;
-                    border: none;
                     border-radius: 50%;
                     line-height: 50px;
                     width: 50px;
-                    height: 50px;
                     font-size: 18px;
                     transition: $transition;
 
@@ -313,7 +310,10 @@ p {
                     padding-right: 20px;
 
                     a {
-                        span {display: none;}
+                        span {
+                            display: none;
+                        }
+
                         i {
                             display: inline-block;
                             color: $color-main;
@@ -337,7 +337,7 @@ p {
 
                 .portfolio-image {
                     height: 200px;
-                }
+                } 
             }
     }
 
@@ -362,7 +362,6 @@ p {
             li a i {
                 line-height: 30px;
                 width: 30px;
-                height: 30px;
                 font-size: 14px;
             }
         }
